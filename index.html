@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Deyarak - Marketplace</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: #fafafa;
+        }
+
+        /* ---------- Navbar ---------- */
+        .navbar {
+            background: #ff6600;
+            padding: 15px 25px;
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .menu a {
+            text-decoration: none;
+            color: white;
+            margin-left: 15px;
+            font-size: 18px;
+        }
+
+        /* ---------- Landing Section ---------- */
+        .landing {
+            background: url('https://i.imgur.com/cPh3YyY.jpeg') center/cover no-repeat;
+            height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-right: 60px;
+            color: white;
+            text-shadow: 2px 2px 6px black;
+        }
+
+        .landing h1 {
+            font-size: 42px;
+            margin: 0;
+        }
+
+        .landing p {
+            font-size: 20px;
+            width: 60%;
+            margin-top: 10px;
+        }
+
+        .landing .btn {
+            margin-top: 20px;
+            background: white;
+            color: #ff6600;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ---------- Categories ---------- */
+        .categories {
+            padding: 25px;
+        }
+
+        .categories h2 {
+            margin-bottom: 15px;
+        }
+
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+        }
+
+        .cat-card {
+            background: white;
+            border-radius: 8px;
+            padding: 18px;
+            border: 1px solid #ddd;
+            text-align: center;
+            cursor: pointer;
+            transition: .2s;
+            font-weight: bold;
+        }
+
+        .cat-card:hover {
+            background: #ff6600;
+            color: white;
+            transform: translateY(-4px);
+        }
+
+        /* ---------- Products ---------- */
+        .products {
+            padding: 25px;
+        }
+
+        .products h2 {
+            margin-bottom: 15px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 18px;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            transition: .2s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            border-color: #ff6600;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-card .name {
+            margin: 10px 0 5px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .product-card .price {
+            color: #ff6600;
+            font-size: 19px;
+        }
+
+        /* ---------- Footer ---------- */
+        .footer {
+            background: #222;
+            padding: 25px;
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div>Deyarak</div>
+        <div class="menu">
+            <a href="#">الرئيسية</a>
+            <a href="#">الأقسام</a>
+            <a href="#">تواصل معنا</a>
+        </div>
+    </div>
+
+
+    <!-- Landing -->
+    <div class="landing">
+        <h1>كل مستلزمات التشطيب في مكان واحد</h1>
+        <p>
+            Deyarak هو أول ماركت بليس متكامل لمواد التشطيب في مصر —  
+            اختار خاماتك، قارن الأسعار، وشوف أفضل الموردين… وكل ده وانت قاعد في مكانك.
+        </p>
+        <a href="#" class="btn">ابدأ التسوّق الآن</a>
+    </div>
+
+
+    <!-- Categories -->
+    <div class="categories">
+        <h2>الأقسام</h2>
+
+        <div class="cat-grid">
+            <div class="cat-card">سيراميك</div>
+            <div class="cat-card">دهانات</div>
+            <div class="cat-card">إضاءة</div>
+            <div class="cat-card">أدوات صحية</div>
+            <div class="cat-card">نجارة</div>
+            <div class="cat-card">كهرباء</div>
+        </div>
+    </div>
+
+
+    <!-- Products -->
+    <div class="products">
+        <h2>منتجات مقترحة</h2>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="https://i.imgur.com/2XW3AVC.jpeg">
+                <div class="name">خلاط إيطالي فاخر</div>
+                <div class="price">1450 جنيه</div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.imgur.com/TiUrobp.jpeg">
+                <div class="name">لمبة ليد 18W</div>
+                <div class="price">120 جنيه</div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.imgur.com/98jvStY.jpeg">
+                <div class="name">سيراميك مقاس 60x60</div>
+                <div class="price">350 جنيه للمتر</div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.imgur.com/ALrVMpc.jpeg">
+                <div class="name">دهان بلاستيك مط</div>
+                <div class="price">250 جنيه</div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2025 Deyarak Marketplace — All Rights Reserved
+    </div>
+
+</body>
+</html>
