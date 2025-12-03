@@ -1,180 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Deyarak - Products</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Deyarak - Products</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f8fc;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: #f4f7fb;
+    }
 
-        /* NAVBAR */
-        nav {
-            background: #012b5a;
-            padding: 12px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
+    /* NAVBAR */
+    .navbar {
+        background: #0a1b2a;
+        padding: 15px 30px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
 
-        nav .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin-right: 20px;
+        font-weight: 500;
+    }
 
-        nav img {
-            width: 40px;
-        }
+    .navbar-links {
+        display: flex;
+        gap: 20px;
+    }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
+    /* HEADER */
+    h1.page-title {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 34px;
+        color: #0a1b2a;
+    }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
+    /* PRODUCTS GRID */
+    .products-grid {
+        max-width: 1200px;
+        margin: 40px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        padding: 0 20px;
+    }
 
-        /* Hide menu for mobile */
-        #menu-btn {
-            display: none;
-            font-size: 26px;
-            cursor: pointer;
-        }
+    .product-card {
+        background: #fff;
+        border-radius: 18px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        transition: 0.3s ease;
+    }
 
-        /* MOBILE MENU */
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                position: absolute;
-                top: 60px;
-                right: 0;
-                background: #012b5a;
-                width: 100%;
-                flex-direction: column;
-                padding: 20px;
-            }
+    .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
 
-            nav ul.show {
-                display: flex;
-            }
+    .product-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
 
-            #menu-btn {
-                display: block;
-            }
-        }
+    .product-card h3 {
+        margin: 10px 0;
+        color: #0a1b2a;
+        font-size: 20px;
+    }
 
-        /* TITLE */
-        h1 {
-            text-align: center;
-            margin: 30px 0;
-            color: #0a2342;
-            font-size: 32px;
-        }
+    .product-card p {
+        font-size: 14px;
+        color: #555;
+    }
+</style>
 
-        /* PRODUCTS GRID */
-        .products-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 15px;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-6px);
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 12px;
-        }
-
-        .product-card h3 {
-            margin: 12px 0 5px;
-            color: #0a2b4a;
-        }
-
-        .product-card p {
-            color: #444;
-        }
-    </style>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById("nav-links").classList.toggle("show");
-        }
-    </script>
 </head>
-
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <div class="logo">
-            <img src="logo.png" alt="">
-            <span>Deyarak</span>
-        </div>
-
-        <span id="menu-btn" onclick="toggleMenu()">☰</span>
-
-        <ul id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="suppliers.html">Suppliers</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-
-    <h1>Our Products</h1>
-
-    <!-- PRODUCTS -->
-    <div class="products-container">
-
-        <div class="product-card">
-            <img src="https://i.imgur.com/V2ZcQPw.jpeg" />
-            <h3>Cement</h3>
-            <p>High-quality cement for construction.</p>
-        </div>
-
-        <div class="product-card">
-            <img src="https://i.imgur.com/9AOJ9Zv.jpeg" />
-            <h3>Bricks</h3>
-            <p>Durable, solid red bricks.</p>
-        </div>
-
-        <div class="product-card">
-            <img src="https://i.imgur.com/2wRIPaE.jpeg" />
-            <h3>Steel</h3>
-            <p>Strong reinforced steel bars.</p>
-        </div>
-
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-logo">
+        <a href="index.html"><strong>Deyarak</strong></a>
     </div>
+
+    <div class="navbar-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="suppliers.html">Suppliers</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<h1 class="page-title">Our Products</h1>
+
+<!-- PRODUCTS GRID -->
+<div class="products-grid">
+
+    <!-- Cement -->
+    <div class="product-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2965/2965301.png" />
+        <h3>Cement</h3>
+        <p>High-strength construction cement.</p>
+    </div>
+
+    <!-- Bricks -->
+    <div class="product-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/7541/7541270.png" />
+        <h3>Bricks</h3>
+        <p>Durable red construction bricks.</p>
+    </div>
+
+    <!-- Steel -->
+    <div class="product-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/7441/7441900.png" />
+        <h3>Steel Bars</h3>
+        <p>Strong reinforced steel bars.</p>
+    </div>
+
+    <!-- Sand -->
+    <div class="product-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/809/809957.png" />
+        <h3>Sand</h3>
+        <p>High-quality fine construction sand.</p>
+    </div>
+
+    <!-- Gravel -->
+    <div class="product-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/5274/5274861.png" />
+        <h3>Gravel</h3>
+        <p>Crushed stones for building foundations.</p>
+    </div>
+
+    <!-- Wood -->
+    <div class="product-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" />
+        <h3>Wood</h3>
+        <p>High-grade timber for construction.</p>
+    </div>
+
+    <!-- Paint -->
+    <div class="product-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" />
+        <h3>Paint</h3>
+        <p>Premium interior & exterior paints.</p>
+    </div>
+
+    <!-- Glass -->
+    <div class="product-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1047/1047855.png" />
+        <h3>Glass Sheets</h3>
+        <p>High-quality building glass panels.</p>
+    </div>
+
+    <!-- Pipes -->
+    <div class="product-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" />
+        <h3>PVC Pipes</h3>
+        <p>Durable plumbing and drainage pipes.</p>
+    </div>
+
+</div>
 
 </body>
 </html>
