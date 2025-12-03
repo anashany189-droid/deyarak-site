@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deyarak Dashboard</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  display: flex;
+}
+
+/* ------------------ SIDEBAR ------------------ */
+.sidebar {
+  width: 260px;
+  background: #001b2a;
+  color: white;
+  height: 100vh;
+  padding: 25px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  animation: slideLeft .7s ease;
+}
+
+.sidebar h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #00d7c9;
+}
+
+.sidebar a {
+  display: block;
+  color: #b8c7d1;
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.sidebar a:hover {
+  background: #00d7c920;
+  color: #00d7c9;
+  transform: translateX(6px);
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-25px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ------------------ MAIN CONTENT ------------------ */
+.main {
+  margin-left: 260px;
+  padding: 30px;
+  width: 100%;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #003c5a;
+}
+
+/* ------------------ CARDS ------------------ */
+.cards {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  width: 240px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: .3s;
+  animation: grow 1s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+}
+
+@keyframes grow {
+  from { opacity: 0; transform: scale(.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.card h3 {
+  font-size: 22px;
+  color: #001b2a;
+}
+
+.card p {
+  margin-top: 10px;
+  color: #666;
+}
+
+/* ------------------ TABLE ------------------ */
+.table-section {
+  margin-top: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th, table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background: #003c5a;
+  color: white;
+}
+
+table tr:hover {
+  background: #eef6f8;
+}
+
+/* ------------------ CHART ------------------ */
+.chart-container {
+  margin-top: 40px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+</style>
+
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <h2>Deyarak</h2>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="products.html">Products</a>
+  <a href="suppliers.html">Suppliers</a>
+  <a href="index.html">Home</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+  <h1>Dashboard Overview</h1>
+
+  <!-- CARDS -->
+  <div class="cards">
+    <div class="card">
+      <h3>Total Products</h3>
+      <p>154</p>
+    </div>
+
+    <div class="card">
+      <h3>Suppliers</h3>
+      <p>32 Active</p>
+    </div>
+
+    <div class="card">
+      <h3>Pending Orders</h3>
+      <p>12</p>
+    </div>
+
+    <div class="card">
+      <h3>Completed Orders</h3>
+      <p>87</p>
+    </div>
+  </div>
+
+  <!-- TABLE -->
+  <div class="table-section">
+    <h2>Recent Activity</h2>
+    <table>
+      <tr>
+        <th>ID</th><th>Action</th><th>Status</th>
+      </tr>
+      <tr>
+        <td>#101</td><td>New product added</td><td>Success</td>
+      </tr>
+      <tr>
+        <td>#089</td><td>Supplier Updated</td><td>Success</td>
+      </tr>
+      <tr>
+        <td>#066</td><td>Order Pending</td><td>Waiting</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- CHART -->
+  <div class="chart-container">
+    <h2>Monthly Performance</h2>
+    <canvas id="chart"></canvas>
+  </div>
+
+</div>
+
+<!-- CHART LIBRARY -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById("chart");
+
+new Chart(ctx, {
+  type: "line",
+  data: {
+    labels: ["Jan","Feb","Mar","Apr","May","Jun"],
+    datasets: [{
+      label: "Orders",
+      data: [12,19,11,25,18,30],
+      borderColor: "#00b8aa",
+      borderWidth: 3
+    }]
+  },
+});
+</script>
+
+</body>
+</html>
