@@ -1,87 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deyarak - Smart Construction Solutions</title>
+
+    <style>
+        /* ---------------- NAVBAR ---------------- */
+        nav {
+            background: #0d1b2a;
+            padding: 14px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo img {
+            width: 50px;
+        }
+
+        .nav-logo span {
+            color: #06b6d4;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: #06b6d4;
+        }
+
+        .login-btn {
+            padding: 8px 16px;
+            background: #06b6d4;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .login-btn:hover {
+            background: #0891b2;
+        }
+
+
+        /* ------------- HERO SECTION ---------------- */
+        .hero {
+            background: url("https://images.unsplash.com/photo-1581090464777-41f6c7c5d89c")
+            center/cover no-repeat;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            padding-left: 60px;
+            color: white;
+            text-shadow: 1px 1px 6px #000;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            max-width: 600px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-top: 20px;
+            max-width: 480px;
+        }
+
+        .hero button {
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+            background: #06b6d4;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .hero button:hover {
+            background: #0891b2;
+        }
+
+
+        /* --------------- ABOUT SECTION ---------------- */
+        .about {
+            padding: 80px 60px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 40px;
+            color: #0d1b2a;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #1b263b;
+        }
+
+
+        /* ---------------- FOOTER ---------------- */
+        footer {
+            background: #0d1b2a;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+        footer a {
+            color: #06b6d4;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
 <!-- NAVBAR -->
-<nav class="navbar">
+<nav>
     <div class="nav-logo">
         <img src="logo.png" alt="Deyarak Logo" />
         <span>Deyarak</span>
     </div>
 
     <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="suppliers.html">Suppliers</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#suppliers">Suppliers</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
 
     <a href="login.html" class="login-btn">Login</a>
 </nav>
 
-<style>
-/* ---- NAVBAR ---- */
-.navbar {
-    background: #0d1b2a;
-    padding: 12px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
 
-.nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+    <div>
+        <h1>Smart Construction Management Solutions</h1>
+        <p>Deyarak helps you manage suppliers, products, and construction resources with one simple platform.</p>
+        <button>Get Started</button>
+    </div>
+</section>
 
-.nav-logo img {
-    width: 45px;
-}
 
-.nav-logo span {
-    font-size: 24px;
-    color: #1b9aaa;
-    font-weight: bold;
-}
+<!-- ABOUT SECTION -->
+<section class="about" id="about">
+    <h2>About Deyarak</h2>
+    <p>
+        Deyarak is a modern construction management system designed to help businesses
+        handle suppliers, products, and workflows efficiently.  
+        Our goal is to save you time, reduce mistakes, and make your construction process smarter.
+    </p>
+</section>
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
 
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    transition: 0.25s;
-}
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 Deyarak | All Rights Reserved</p>
+    <p>Contact: <a href="mailto:anashany189@gmail.com">anashany189@gmail.com</a></p>
+</footer>
 
-.nav-links li a:hover {
-    color: #1b9aaa;
-}
-
-.login-btn {
-    background: #1b9aaa;
-    padding: 8px 16px;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: 0.25s;
-}
-
-.login-btn:hover {
-    background: #1592a0;
-}
-
-/* ---- FOOTER ---- */
-footer {
-    background: #0d1b2a;
-    color: white;
-    padding: 25px;
-    text-align: center;
-    margin-top: 40px;
-    font-size: 14px;
-}
-</style>
+</body>
+</html>
