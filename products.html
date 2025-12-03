@@ -1,98 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deyarak - Products</title>
 
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background: #f8f9fa;
+            font-family: Arial, sans-serif;
+            background: #f5f8fc;
         }
 
+        /* NAVBAR */
         nav {
-            background: #0d1b2a;
-            padding: 14px 40px;
+            background: #012b5a;
+            padding: 12px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 999;
         }
 
-        nav a {
+        nav .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav img {
+            width: 40px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
             color: white;
             text-decoration: none;
-            margin-left: 20px;
             font-size: 18px;
         }
 
+        /* Hide menu for mobile */
+        #menu-btn {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        /* MOBILE MENU */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: #012b5a;
+                width: 100%;
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            #menu-btn {
+                display: block;
+            }
+        }
+
+        /* TITLE */
         h1 {
             text-align: center;
-            margin-top: 40px;
-            color: #0d1b2a;
+            margin: 30px 0;
+            color: #0a2342;
+            font-size: 32px;
         }
 
-        .grid {
-            width: 80%;
-            margin: 40px auto;
+        /* PRODUCTS GRID */
+        .products-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .card {
-            background: white;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
             padding: 20px;
-            border-radius: 10px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
             text-align: center;
-            box-shadow: 0 2px 8px #ccc;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
         }
 
-        .card img {
+        .product-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .product-card img {
             width: 100%;
-            height: 180px;
+            height: 160px;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 12px;
         }
 
-        .card h3 {
-            margin: 15px 0;
-            color: #0d1b2a;
+        .product-card h3 {
+            margin: 12px 0 5px;
+            color: #0a2b4a;
+        }
+
+        .product-card p {
+            color: #444;
         }
     </style>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-links").classList.toggle("show");
+        }
+    </script>
 </head>
 
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="suppliers.html">Suppliers</a>
-    <a href="contact.html">Contact</a>
-</nav>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="">
+            <span>Deyarak</span>
+        </div>
 
-<h1>Our Products</h1>
+        <span id="menu-btn" onclick="toggleMenu()">☰</span>
 
-<div class="grid">
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" />
-        <h3>Cement</h3>
-        <p>High-quality cement for construction.</p>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="suppliers.html">Suppliers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <h1>Our Products</h1>
+
+    <!-- PRODUCTS -->
+    <div class="products-container">
+
+        <div class="product-card">
+            <img src="https://i.imgur.com/V2ZcQPw.jpeg" />
+            <h3>Cement</h3>
+            <p>High-quality cement for construction.</p>
+        </div>
+
+        <div class="product-card">
+            <img src="https://i.imgur.com/9AOJ9Zv.jpeg" />
+            <h3>Bricks</h3>
+            <p>Durable, solid red bricks.</p>
+        </div>
+
+        <div class="product-card">
+            <img src="https://i.imgur.com/2wRIPaE.jpeg" />
+            <h3>Steel</h3>
+            <p>Strong reinforced steel bars.</p>
+        </div>
+
     </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1591365624394-3ed9bd5005c8" />
-        <h3>Bricks</h3>
-        <p>Durable construction bricks.</p>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1581091870632-71f8c2d6196e" />
-        <h3>Steel</h3>
-        <p>Strong reinforced steel bars.</p>
-    </div>
-</div>
 
 </body>
 </html>
