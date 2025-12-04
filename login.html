@@ -1,60 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Deyarak - Login</title>
-
-    <style>
-        body {
-            background: #0d1b2a;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial;
-        }
-
-        .login-box {
-            background: white;
-            padding: 35px;
-            width: 350px;
-            border-radius: 15px;
-            box-shadow: 0 3px 12px black;
-        }
-
-        h2 {
-            text-align: center;
-            color: #0d1b2a;
-        }
-
-        input {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border-radius: 8px;
-            border: 1px solid gray;
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            background: #06b6d4;
-            color: white;
-            border: none;
-            border-radius: 8px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deyarak | Login</title>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
-
 <body>
 
-<div class="login-box">
-    <h2>Login</h2>
-    <input type="email" placeholder="Email">
-    <input type="password" placeholder="Password">
-    <button>Login</button>
-</div>
+    <!-- NAVBAR -->
+    <nav>
+        <h1>DEYARAK</h1>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="suppliers.html">Suppliers</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <!-- LOGIN BOX -->
+    <div class="login-box">
+        <h2 style="color:#7B3FF2; text-align:center; margin-bottom:15px;">
+            Login to Your Account
+        </h2>
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email">
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password">
+
+        <button>Login</button>
+
+        <p style="text-align:center; margin-top:20px;">
+            Don’t have an account?
+            <a href="#" style="color:#7B3FF2; text-decoration:none;">Contact Support</a>
+        </p>
+    </div>
 
 </body>
 </html>
