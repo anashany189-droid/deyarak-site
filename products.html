@@ -1,224 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Deyarak - Home</title>
-
-<style>
-/* GENERAL */
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f4f7fb;
-    overflow-x: hidden;
-}
-
-/* ANIMATION */
-.fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 1.2s ease forwards;
-}
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* NAVBAR */
-.navbar {
-    background: #0a1b2a;
-    padding: 15px 25px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.navbar a {
-    color: white;
-    text-decoration: none;
-    margin-right: 18px;
-    font-weight: 500;
-}
-.navbar-links {
-    display: flex;
-    gap: 20px;
-}
-
-/* HERO SECTION */
-.hero {
-    background: linear-gradient(120deg, #0a1b2a, #144b72);
-    color: white;
-    padding: 90px 30px;
-    text-align: left;
-}
-.hero h1 {
-    font-size: 46px;
-    max-width: 600px;
-}
-.hero p {
-    font-size: 20px;
-    margin-top: 10px;
-    max-width: 500px;
-}
-
-/* SERVICES */
-.services {
-    text-align: center;
-    padding: 60px 20px;
-}
-.services h2 {
-    font-size: 32px;
-    color: #0a1b2a;
-    margin-bottom: 40px;
-}
-.service-grid {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-.service-card {
-    background: #fff;
-    padding: 25px;
-    border-radius: 18px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
-}
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.13);
-}
-.service-card h3 {
-    color: #0a1b2a;
-}
-.service-card p {
-    color: #444;
-}
-
-/* FOOTER */
-.footer {
-    background: #0a1b2a;
-    color: white;
-    padding: 40px 25px;
-    margin-top: 60px;
-}
-.footer-grid {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 30px;
-}
-.footer h3 {
-    color: #51c5d8;
-}
-.footer a {
-    color: #bfe9ff;
-    text-decoration: none;
-    display: block;
-    margin: 5px 0;
-}
-
-/* MOBILE FIXES */
-@media (max-width: 768px) {
-    .hero {
-        text-align: center;
-    }
-    .hero h1 {
-        font-size: 32px;
-    }
-    .hero p {
-        font-size: 16px;
-    }
-    .navbar-links {
-        display: none; /* Hide menu on phone (later we add burger menu if you want) */
-    }
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deyarak | Products</title>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="nav-logo">
-        <a href="index.html"><strong>Deyarak</strong></a>
-    </div>
-
-    <div class="navbar-links">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="suppliers.html">Suppliers</a>
-        <a href="contact.html">Contact</a>
-        <a href="login.html">Login</a>
-    </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero fade-up">
-    <h1>Smart Construction & Supplier Management</h1>
-    <p>Deyarak helps you manage products, suppliers, and operations with full control and automation.</p>
-</section>
-
-<!-- SERVICES -->
-<section class="services fade-up">
-    <h2>Our Services</h2>
-
-    <div class="service-grid">
-
-        <div class="service-card">
-            <h3>Product Management</h3>
-            <p>Add, Update & Track your construction products.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Supplier System</h3>
-            <p>Manage your suppliers & performance easily.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Smart Dashboard</h3>
-            <p>Monitor everything from one control center.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Secure Login</h3>
-            <p>Access your management panel securely.</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer fade-up">
-    <div class="footer-grid">
+    <!-- NAVBAR -->
+    <nav>
+        <h1>DEYARAK</h1>
         <div>
-            <h3>Deyarak</h3>
-            <p>Smart construction & supplier management platform.</p>
-        </div>
-
-        <div>
-            <h3>Links</h3>
             <a href="index.html">Home</a>
             <a href="products.html">Products</a>
             <a href="suppliers.html">Suppliers</a>
-            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
         </div>
+    </nav>
 
-        <div>
-            <h3>Contact</h3>
-            <p>Email: support@deyarak.com</p>
-            <p>Phone: +20 100 000 0000</p>
+    <!-- PRODUCTS -->
+    <section class="products-container">
+        <h2 style="color:#7B3FF2; margin-bottom:20px;">Available Products</h2>
+
+        <div class="grid">
+
+            <!-- PRODUCT 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1581091870634-2f7c4c1b1b89?auto=format&fit=crop&w=900" alt="">
+                <h3>White Cement</h3>
+                <p>Starting from 95 EGP per unit</p>
+                <a class="btn" href="#">View Details</a>
+            </div>
+
+            <!-- PRODUCT 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1581090700227-1e37b44a53d2?auto=format&fit=crop&w=900" alt="">
+                <h3>Tiles & Ceramics</h3>
+                <p>Starting from 155 EGP per sqm</p>
+                <a class="btn" href="#">View Details</a>
+            </div>
+
+            <!-- PRODUCT 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1581090464777-5e9ab21e8b56?auto=format&fit=crop&w=900" alt="">
+                <h3>Paint Buckets</h3>
+                <p>Starting from 220 EGP per bucket</p>
+                <a class="btn" href="#">View Details</a>
+            </div>
+
+            <!-- PRODUCT 4 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1625231334161-7fb87d0ed6f3?auto=format&fit=crop&w=900" alt="">
+                <h3>Plumbing Pipes</h3>
+                <p>Starting from 45 EGP per meter</p>
+                <a class="btn" href="#">View Details</a>
+            </div>
+
+            <!-- PRODUCT 5 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1600585152915-d99c2f8bde8c?auto=format&fit=crop&w=900" alt="">
+                <h3>Doors & Frames</h3>
+                <p>Starting from 950 EGP</p>
+                <a class="btn" href="#">View Details</a>
+            </div>
+
+            <!-- PRODUCT 6 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1560180474-e8563fd75bab?auto=format&fit=crop&w=900" alt="">
+                <h3>Electrical Supplies</h3>
+                <p>Starting from 15 EGP</p>
+                <a class="btn" href="#">View Details</a>
+            </div>
+
         </div>
-    </div>
-</footer>
+    </section>
 
 </body>
 </html>
